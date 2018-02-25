@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Face API</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/ui-darkness/jquery-ui.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/site.css"/>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/persongroup/add/">Add Person Group</a>
+            <a class="navbar-brand" href="/person/add/">|  Add Person</a>
+            <a class="navbar-brand" href="/personface/add/">|  Add Person Face</a>
+            <a class="navbar-brand" href="/train/">|  Train Group</a>
+            <a class="navbar-brand" href="/identify/">|  Identify</a>
+        </div>
+    </div>
+</nav>
+<br/><br/><br/><br/>
+<h1>Person Group Form</h1>
+	<div>
+		<form method="POST" action="/persongroup/add/">
+			<table>
+			    <tr><td>Enter Person Group Name:</td><td><input type="text" name="name" /></td></tr>
+				<tr><td><input type="submit" value="Submit" /></td></tr>
+			</table>
+		</form>
+	</div>
+
+<br/>
+	<div th:if="${message}">
+		<p th:text="${message}"/>
+	</div>
+
+	<script src="https://breakdown.blob.core.windows.net/public/vb.widgets.mediator.js"></script>
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/site.js"></script>
+</body>
+</html>
